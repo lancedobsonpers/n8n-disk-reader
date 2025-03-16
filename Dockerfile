@@ -1,3 +1,4 @@
 FROM alpine
 RUN apk add --no-cache busybox-extras
-CMD ["httpd", "-f", "-p", "10000"]
+ENV PORT=10000
+CMD ["sh", "-c", "httpd -f -p $PORT"]
