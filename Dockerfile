@@ -1,2 +1,3 @@
 FROM alpine
-CMD ["sleep", "infinity"]
+RUN apk add --no-cache busybox-extras
+CMD ["httpd", "-f", "-p", "10000"]
