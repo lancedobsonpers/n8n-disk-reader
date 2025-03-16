@@ -1,1 +1,2 @@
-FROM alpine\nCMD ["sleep", "infinity"]
+FROM alpine
+CMD ["sleep", "infinity"]
