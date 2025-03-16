@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-# Write a minimal HTTP server into server.js
+# Create the server.js file
 RUN echo "const http = require('http'); \
 const port = process.env.PORT || 10000; \
 const host = '0.0.0.0'; \
@@ -13,5 +13,5 @@ server.listen(port, host, () => { \
   console.log('Server running on http://' + host + ':' + port); \
 });" > server.js
 
-# Add this to run the app!
+# Start the server when the container runs
 CMD ["node", "server.js"]
