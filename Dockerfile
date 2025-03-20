@@ -1,6 +1,6 @@
 FROM node:18-alpine
 
-# Create the server.js file
+# Create server.js
 RUN echo "const http = require('http'); \
 const port = process.env.PORT || 10000; \
 const host = '0.0.0.0'; \
@@ -13,5 +13,5 @@ server.listen(port, host, () => { \
   console.log('Server running on http://' + host + ':' + port); \
 });" > server.js
 
-# Start the server when the container runs
+# This line makes the container RUN the server!
 CMD ["node", "server.js"]
