@@ -6,5 +6,5 @@ RUN echo "const http = require('http'); const port = process.env.PORT || 10000; 
 # Expose the port (optional but good practice)
 EXPOSE 10000
 
-# Start the server when the container starts
+# Actually RUN the server when the container starts
 CMD ["node", "server.js"]
