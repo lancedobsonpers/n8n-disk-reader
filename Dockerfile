@@ -1,13 +1,13 @@
+# Use Node.js alpine as the base image
 FROM node:18-alpine
 
+# Set the working directory inside the container
 WORKDIR /app
 
+# Copy the server.js file into the container
 COPY server.js .
 
-# Install any dependencies (if you had a package.json, but it's optional here)
-# RUN npm install
-
-# Expose the port (optional but recommended for documentation)
+# Expose the port that the app runs on (important for Render)
 EXPOSE 10000
 
 # Start the server
